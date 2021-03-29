@@ -11,7 +11,7 @@ contract("Space Token", async (accounts) => {
     spaceToken = await SpaceToken.deployed();
   });
 
-  describe("ERC-720 Token Contract Deployment", async () => {
+  describe("ERC-20 Token Contract Deployment", async () => {
     it("contract has an address", async () => {
       const address = await spaceToken.address;
       assert.notEqual(address, 0x0);
@@ -36,7 +36,7 @@ contract("Space Token", async (accounts) => {
     });
   });
 
-  describe("ERC-720 Token Implementation", async () => {
+  describe("ERC-20 Token Implementation", async () => {
     it("allows token transfer", async () => {
       let oldSenderBalance, oldReceiverBalance, newSenderBalance, newReceiverBalance;
       oldSenderBalance = await spaceToken.balanceOf(accounts[0]);
